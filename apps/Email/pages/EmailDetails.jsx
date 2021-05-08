@@ -38,7 +38,7 @@ export class EmailDetails extends React.Component {
 				<div className="mail-actions flex">
 					{/* <button className="toggle-read" ></button> */ }
 					<Link to="/mail" ><i className="fas fa-arrow-left"></i></Link>
-					<Link to="/mail" onClick={ () => { this.onDeleteMail() } }><i class="fas fa-trash"></i></Link>
+					<Link to="/mail" onClick={ () => { this.onDeleteMail() } }><i className="fas fa-trash"></i></Link>
 					<Link to="/mail" onClick={ () => { this.onMarkUnread() } }><i className="fas fa-envelope"></i></Link>
 				</div>
 
