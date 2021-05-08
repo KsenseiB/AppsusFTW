@@ -14,30 +14,92 @@ export const emailService = {
 }
 
 const loadStorage = storageService.loadFromStorage(KEY);
-var gEmails = loadStorage ? loadStorage : [ {
-    id: '1',
-    sender: 'Roey',
-    subject: 'Wassap?',
-    body: 'Pick up!',
-    isRead: false,
-    sentAt: new Date().toLocaleDateString()
-},
-{
-    id: '2',
-    sender: 'Panda',
-    subject: 'yoooooooooooooooooooooooooooooooo?',
-    body: 'Pick upedsgzeeeeeeeeeee!',
-    isRead: true,
-    sentAt: new Date().toLocaleDateString()
-},
-{
-    id: '3',
-    sender: 'Elon Musk',
-    subject: 'why you ghosting?',
-    body: 'Pick up!',
-    isRead: false,
-    sentAt: new Date().toLocaleDateString()
-}
+var gEmails = loadStorage ? loadStorage : [{
+        id: '1',
+        sender: 'Roey',
+        subject: 'Wassap?',
+        body: 'Pick up!',
+        isRead: false,
+        sentAt: new Date().toLocaleDateString()
+    },
+    {
+        id: '2',
+        sender: 'Panda',
+        subject: 'yoooooooooooooooooooooooooooooooo?',
+        body: 'Pick upedsgzeeeeeeeeeee!',
+        isRead: true,
+        sentAt: new Date().toLocaleDateString()
+    },
+    {
+        id: '3',
+        sender: 'Elon Musk',
+        subject: 'why you ghosting?',
+        body: 'Pick up!',
+        isRead: false,
+        sentAt: new Date().toLocaleDateString()
+    },
+    {
+        id: '4',
+        sender: 'tony@starkind.com',
+        subject: 'Hulk advertising opportunity?',
+        body: 'Should we consider using the Hulk to advertise for Stark industries? He\'s basically a giant banner.',
+        isRead: false,
+        sentAt: new Date().toLocaleDateString()
+    },
+    {
+        id: '5',
+        sender: ' thor@theworthy.com',
+        subject: 'Shower thoughts',
+        body: 'Pick up!',
+        isRead: false,
+        sentAt: new Date().toLocaleDateString()
+    },
+    {
+        id: '6',
+        sender: 'Elon Musk',
+        subject: 'why you ghosting?',
+        body: 'Pick up!',
+        isRead: false,
+        sentAt: new Date().toLocaleDateString()
+    },
+    {
+        id: '7',
+        sender: 'peter@daddyissues.com',
+        subject: 'Summer time',
+        body: ' I\'m not ready for the summer but I\'m sure Tan-os is.',
+        isRead: false,
+        sentAt: new Date().toLocaleDateString()
+    },
+    {
+        id: '8',
+        sender: 'gandalf@thegrey.com',
+        subject: ' keep studying',
+        body: 'If you keep watching the Lord of the Rings movies, you shall not pass your exams.',
+        isRead: false,
+        sentAt: new Date().toLocaleDateString()
+    }, {
+        id: '9',
+        sender: 'greengoblin@pumpkinbombs.com',
+        subject: 'spiderman?',
+        body: 'Uncle Ben would never discourage Peter Parker from joining the Avengers. But his Aunt May.',
+        isRead: false,
+        sentAt: new Date().toLocaleDateString()
+    }, {
+        id: '10',
+        sender: 'andy@aussieland.com',
+        subject: 'Australia is awesome',
+        body: 'Home of the Macropodidae, Phascolarctos cinereus and the Thylarctos plummetus. (you should google the last one)',
+        isRead: false,
+        sentAt: new Date().toLocaleDateString()
+
+    }, {
+        id: '11',
+        sender: 'nickfury@shield.gov',
+        subject: 'I bet the Avengers would be great with tools',
+        body: 'They are always assembling.',
+        isRead: false,
+        sentAt: new Date().toLocaleDateString()
+    }
 ];
 
 function query() {
@@ -45,7 +107,7 @@ function query() {
 }
 
 function getEmailById(emailId) {
-    const email = gEmails.find(function (email) {
+    const email = gEmails.find(function(email) {
         return emailId === email.id
     })
     return Promise.resolve(email);
@@ -56,6 +118,7 @@ function readEmail(emailId) {
     emailId.isRead = true;
     storageService.saveToStorage(KEY, gEmails);
 }
+
 function unReadEmail(emailId) {
     emailId.isRead = false;
     storageService.saveToStorage(KEY, gEmails);
@@ -68,7 +131,7 @@ function unReadEmail(emailId) {
 // }
 
 function deleteEmail(emailId) {
-    const emailIdx = gEmails.findIndex(function (email) {
+    const emailIdx = gEmails.findIndex(function(email) {
         return emailId === email.id
     });
     gEmails.splice(emailIdx, 1);
