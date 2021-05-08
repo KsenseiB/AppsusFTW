@@ -1,5 +1,5 @@
 const { Link } = ReactRouterDOM;
-import { emailService } from './email/emailService.jsx';
+import { emailService } from '../services/email-service.js';
 
 export class EmailCompose extends React.Component {
     state = {

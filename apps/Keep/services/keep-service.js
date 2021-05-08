@@ -231,7 +231,7 @@ function changeColor(id, color) {
 
 function revertColor(id) {
     var pos = gNotes.findIndex(note => note.id === id)
-    gNotes[pos].style.backgroundColor = "#ebb2e2"
+    gNotes[pos].style.backgroundColor = "rgba(255, 255, 255, 0)"
 }
 
 function addTask(id, txt) {

@@ -19,7 +19,7 @@ export function EmailPreview({ email, onDeleteEmail }) {
     const previewClass = (!email.isRead) ? 'unread' : '';
 
     return (
-        <Link to={ `/mail/${ email.id }` } onClick={ () => onMarkIsRead() }>
+        <Link to={ `/mail/` } onClick={ () => onMarkIsRead() }>
             <li className={ 'flex email-list-item email-preview ' + previewClass } >
 
                 <p className={ previewClass }>{ email.sender }</p>

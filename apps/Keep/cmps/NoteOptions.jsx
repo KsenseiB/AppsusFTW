@@ -1,4 +1,6 @@
+const { Link } = ReactRouterDOM
 import {keepService} from '../services/keep-service.js'
+import {EmailCompose} from '../../Email/pages/EmailCompose.jsx'
 
 export class NoteOptions extends React.Component {
     
@@ -23,6 +25,10 @@ export class NoteOptions extends React.Component {
         this.props.loadNotes()
     }
 
+    onComposeNote = () => {
+        EmailCompose.handleChange()
+    }
+
     render() {
         return(
             <div className="note-options">
@@ -30,6 +36,9 @@ export class NoteOptions extends React.Component {
                 <input className="input-color" type="color" value="#ebb2e2" onChange={this.onChangeColor} label="hi"></input>
                 <button className="btn btn-opt revert" onClick={this.onRevertColor}><i className="fas fa-palette"></i></button>
                 <button className="btn btn-opt" onClick={this.onTogglePin}><i className="fas fa-thumbtack"></i></button>
+                <Link to={'/mail/compose'}>
+                <button onClick={this.onComposeNote}>Send Note as Email</button>
+                </Link>
             </div>
         )
     }
