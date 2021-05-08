@@ -34,8 +34,8 @@ export class EmailApp extends React.Component {
         const { emails } = this.state;
         if (!emails) return (<div className="loading">
             <span>Loading</span>
-        </div>)
-        console.log('emails', emails);
+        </div>);
+        
         return (
             <section className="mailbox-container flex">
                 <EmailSideNav onSetFilter={ this.setFilter } />
