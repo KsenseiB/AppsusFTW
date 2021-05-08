@@ -1,160 +1,169 @@
 /* why do I need to change input and text area text properties for each invdevidually?*/
 
 * {
-  --col1: #fffcf9;
-  --col2: rgb(32, 199, 196);
-  --col3: rgb(38, 196, 135);
-  --col4: #9c91ae;
-  --col5: #4b3742;
-  --light-txt: #e2f1ef;
-  --dark-txt: #011011;
+    --col1: rgb(38, 196, 135);
+    --col2: rgb(133, 255, 51);
+    --light-txt: #fff;
+    --dark-txt: #000;
 }
 
 .email-list {
-  width: 100%;
-  height: 100%;
-}
-.email-list ul {
-  width: 100%;
-  height: 100%;
-}
-.compose-email {
-  margin: 0 3rem;
-}
-.email-nav-actions {
-  align-items: center;
-}
-.email-nav {
-  padding: 5px;
-  margin-right: 1rem;
-}
-.email-nav li {
-  padding: 5px;
-  border: none;
-}
-.email-nav ul {
-  padding: 5px;
+    width: 100%;
+    height: 100%;
 }
 
-li {
-  border: 1px solid #000;
-  justify-content: space-between;
-  cursor: pointer;
-  list-style-type: none;
+.email-list ul {
+    width: 100%;
+    height: 100%;
 }
+
+.compose-email {
+    margin: 0 3rem;
+}
+
+.email-nav-actions {
+    align-items: center;
+}
+
+.email-nav {
+    padding: 5px;
+    margin-right: 1rem;
+}
+
+.email-nav li {
+    padding: 5px;
+    border: none;
+}
+
+.email-nav ul {
+    padding: 5px;
+}
+
+
+/* li {
+    border-bottom: 1px solid var(--col1);
+    justify-content: space-between;
+    cursor: pointer;
+    list-style-type: none;
+} */
 
 li.unread {
-  font-weight: 700;
+    font-weight: 700;
 }
+
 .email-nav li:hover {
-  border: none;
-  font-weight: 700;
-  color: var(--col3);
-  transform: scale(1.1);
+    border: none;
+    font-weight: 700;
+    color: var(--col1);
+    transform: scale(1.1);
 }
 
 .email-nav input {
-  font-size: 1rem;
-  color: var(--col3);
-  width: 80%;
-  margin-top: 7px;
-  padding: 5px;
-  border-radius: 7px;
-  border: 1px solid;
-  background-color: rgba(255, 255, 255, 0.692);
+    font-size: 1rem;
+    color: var(--col1);
+    width: 80%;
+    margin-top: 7px;
+    padding: 5px;
+    border-radius: 7px;
+    border: 1px solid;
+    background-color: rgba(255, 255, 255, 0.692);
 }
 
 .email-nav input:focus {
-  background-color: #fff;
+    background-color: var(--light-txt);
 }
 
 .unread-count {
-  float: right;
-  font-weight: 700;
+    float: right;
+    font-weight: 700;
 }
 
 .mail-actions {
-  background-color: rgba(255, 255, 255, 0.781);
-  padding: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.781);
+    padding: 0.5rem;
 }
+
 .mail-info {
-  justify-content: space-between;
+    justify-content: space-between;
 }
 
 .line {
-  border-top: 1px solid var(--col3);
-  flex-grow: 1;
-  width: 70%;
+    border-top: 1px solid var(--col1);
+    flex-grow: 1;
+    width: 70%;
 }
 
 .email-content {
-  padding: 1rem;
+    padding: 1rem;
 }
+
 .email-content h4,
 .email-content h5 {
-  margin: 3px;
+    margin: 3px;
 }
+
 .email-compose-btn {
-  align-self: center;
-  margin: 10px;
-  font-size: 1rem;
-  padding: 7px;
-  border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  cursor: pointer;
+    align-self: center;
+    margin: 10px;
+    font-size: 1rem;
+    padding: 7px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    cursor: pointer;
 }
 
 .email-compose-btn:hover {
-  font-weight: 700;
-  color: var(--col3);
-  transform: scale(1.1);
+    font-weight: 700;
+    color: var(--col1);
+    transform: scale(1.1);
 }
 
 .email-compose-btn:active {
-  font-weight: 700;
-  color: #000;
-  transform: scale(1.1);
+    font-weight: 700;
+    color: #000;
+    transform: scale(1.1);
 }
 
 .mail-form {
-  padding: 0.5rem;
+    padding: 0.5rem;
 }
 
 .mail-form input {
-  font-family: 'Lato', sans-serif;
-  font-size: 1rem;
-  letter-spacing: 0.07em;
-  margin: 5px;
-  padding: 7px;
-  border-radius: 3px;
-  border: none;
-  border-bottom: 1px solid var(--col3);
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 0.07em;
+    margin: 5px;
+    padding: 7px;
+    border-radius: 3px;
+    border: none;
+    border-bottom: 1px solid var(--col1);
 }
 
 .mail-form textarea {
-  font-family: 'Lato', sans-serif;
-  letter-spacing: 0.07em;
-  font-size: 1.1rem;
-  padding: 0.5rem;
-  margin: 5px;
-  border: 1px solid var(--col3);
-  border-radius: 3px;
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 0.07em;
+    font-size: 1.1rem;
+    padding: 0.5rem;
+    margin: 5px;
+    border: 1px solid var(--col1);
+    border-radius: 3px;
 }
 
 .email-list-item button {
-  font-size: 1rem;
-  border: none;
-  padding: 3px;
-  margin: 5px;
-  background-color: transparent;
-  cursor: pointer;
+    font-size: 1rem;
+    border: none;
+    padding: 3px;
+    margin: 5px;
+    background-color: transparent;
+    cursor: pointer;
 }
+
 .email-list-item button:hover {
-  color: var(--col2);
-  font-size: 1rem;
-  border: none;
-  padding: 3px;
-  margin: 5px;
-  background-color: transparent;
-  cursor: pointer;
+    color: var(--col2);
+    font-size: 1rem;
+    border: none;
+    padding: 3px;
+    margin: 5px;
+    background-color: transparent;
+    cursor: pointer;
 }

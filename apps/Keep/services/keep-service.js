@@ -1,5 +1,5 @@
 import { utilService } from '../../../services/util-service.js'
-import {storageService} from '../../../services/storage-service.js'
+import { storageService } from '../../../services/storage-service.js'
 
 export const keepService = {
     query,
@@ -23,7 +23,7 @@ var gNotes = [{
             title: ''
         },
         style: {
-            backgroundColor: "#var(--col3)"
+            backgroundColor: "#var(--col1)"
         }
     },
     {
@@ -35,7 +35,7 @@ var gNotes = [{
             title: ''
         },
         style: {
-            backgroundColor: "#var(--col3)"
+            backgroundColor: "#var(--col1)"
         }
     },
     {
@@ -47,7 +47,7 @@ var gNotes = [{
             title: 'Sexiest Man Alive'
         },
         style: {
-            backgroundColor: "#var(--col3)"
+            backgroundColor: "#var(--col1)"
         }
     },
     {
@@ -94,7 +94,7 @@ var gNotes = [{
             ]
         },
         style: {
-            backgroundColor: "#var(--col3)"
+            backgroundColor: "#var(--col1)"
         }
     },
     {
@@ -106,24 +106,24 @@ var gNotes = [{
             url: "https://youtu.be/h6fcK_fRYaI"
         },
         style: {
-            backgroundColor: "#var(--col3)"
+            backgroundColor: "#var(--col1)"
         }
     }
 ];
 
 function query(filterBy) {
     if (filterBy) {
-        let {text, submit} = filterBy
+        let { text, submit } = filterBy
         text = text.toLowerCase()
         const filteredNotes = gNotes.filter(note => {
-          let {title} = note.info
-          title = title.toLowerCase()
-        return note.type.includes(submit) && title.includes(text)
-      })
-      return Promise.resolve(filteredNotes)
+            let { title } = note.info
+            title = title.toLowerCase()
+            return note.type.includes(submit) && title.includes(text)
+        })
+        return Promise.resolve(filteredNotes)
     }
     return Promise.resolve(gNotes)
-  }
+}
 
 function saveNote(content, title, type) {
     var note;
@@ -186,7 +186,7 @@ function saveNote(content, title, type) {
                 }, ]
             },
             style: {
-                backgroundColor: "#var(--col3)"
+                backgroundColor: "#var(--col1)"
             }
         }
     }
@@ -222,23 +222,23 @@ function addTask(id, txt) {
 
 }
 
-function pinNote (id) {
+function pinNote(id) {
     var pos = gNotes.findIndex(note => note.id === id)
     gNotes[pos].isPinned = !gNotes[pos].isPinned
 }
 
-function removeTask(todoId, noteId){
+function removeTask(todoId, noteId) {
     var notePos = gNotes.findIndex(note => note.id === noteId)
-    var {todos} = gNotes[notePos].info
+    var { todos } = gNotes[notePos].info
     var todoPos = todos.findIndex(todo => todo.id === todoId)
     todos.splice(todoPos, 1)
 }
 
-function saveNotes(){
+function saveNotes() {
     storageService.saveToStorage('notes', gNotes)
 }
 
-function loadSaved(){
+function loadSaved() {
     let savedNotes = storageService.loadFromStorage('notes')
     if (savedNotes) gNotes = savedNotes
 }

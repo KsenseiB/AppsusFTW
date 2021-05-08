@@ -4,25 +4,12 @@
 @import '/apps/Email/assets/emailApp.css';
 @import './basics/loader.css';
 @import './helpers.css';
-
-/* 
-  --col1: #fffcf9;
-  --col2: #e7ddda;
-  --col3: #eeb5e2;
-  --col4: #9c91ae;
-  --col5: #4b3742;
-  --light-txt: #e7ddda;
-  --dark-txt: #4b3742; */
-
 * {
     box-sizing: border-box;
-    /* --col1: #fffcf9;
-  --col2: #e7ddda; */
-    --col3: rgb(38, 196, 135);
-    /* --col4: #9c91ae;
-  --col5: #4b3742;
-  --light-txt: #e2f1ef;
-  --dark-txt: #011011; */
+    --col1: rgb(38, 196, 135);
+    --col2: rgb(133, 255, 51);
+    --light-txt: #fff;
+    --dark-txt: #000;
 }
 
 html,
@@ -36,8 +23,8 @@ body {
     font-size: 1.1rem;
     letter-spacing: 0.05em;
     height: 100vh;
-    width: 100vw;
-    padding: 2rem;
+    width: 90vw;
+    /* padding: 2rem; */
     /* font-family: 'Oswald', sans-serif; */
     background-image: url(/assets/imgs/animatedHeader.svg);
     background-size: 100%;
@@ -53,9 +40,28 @@ input:focus {
     outline: none;
 }
 
-.txt-input {
+li {
+    border-bottom: 1px solid var(--col1);
+    justify-content: space-between;
+    cursor: pointer;
+    list-style-type: none;
+}
+
+
+/* input {
+    font-family: 'Lato', sans-serif;
     font-size: 1rem;
-    color: var(--col3);
+    letter-spacing: 0.07em;
+    margin: 5px;
+    padding: 7px;
+    border-radius: 3px;
+    border: none;
+    border-bottom: 1px solid var(--col1);
+} */
+
+.txt-input,
+input {
+    color: var(--col1);
     width: 80%;
     margin-top: 7px;
     padding: 5px;
@@ -64,8 +70,10 @@ input:focus {
     background-color: rgba(255, 255, 255, 0.692);
 }
 
+input:focus,
 .txt-input:focus {
     background-color: #fff;
+    border: 2px solid;
 }
 
 
@@ -85,19 +93,50 @@ input:focus {
 
 button {
     align-self: center;
+    padding: 3px;
     margin: 5px;
-    /* font-size: 1rem; */
+    font-size: 1rem;
     padding: 7px;
     border-radius: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    cursor: pointer;
+    /* background-color: transparent; */
     cursor: pointer;
 }
 
 button:hover {
     font-weight: 700;
-    color: var(--col3);
+    color: var(--col1);
+    /* color: var(--col2); */
+    font-size: 1rem;
+    border: none;
+    padding: 3px;
+    margin: 5px;
+    background-color: transparent;
+    cursor: pointer;
 }
 
 button:active {
     color: #000;
+}
+
+.mail-form input {
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 0.07em;
+    margin: 5px;
+    padding: 7px;
+    border-radius: 3px;
+    border: none;
+    border-bottom: 1px solid var(--col1);
+}
+
+.mail-form textarea {
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 0.07em;
+    font-size: 1.1rem;
+    padding: 0.5rem;
+    margin: 5px;
+    border: 1px solid var(--col1);
+    border-radius: 3px;
 }

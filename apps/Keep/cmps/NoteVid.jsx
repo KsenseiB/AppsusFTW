@@ -35,7 +35,7 @@ export class NoteVid extends React.Component {
         return (
             <div className={className} style={divStyle}>
                 <p>{note.info.title}</p>
-                <iframe width="560" height="315" src={src}
+                <iframe src={src}
                     title="YouTube video player" allow="fullscreen"></iframe>
                 <NoteOptions noteId={note.id} loadNotes={loadNotes} setPinned={this.setPinned} />
             </div>
