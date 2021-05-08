@@ -27,7 +27,7 @@ body {
     width: 90vw;
     /* padding: 2rem; */
     /* font-family: 'Oswald', sans-serif; */
-    background-image: url(/assets/imgs/animatedHeader.svg);
+    background-image: url(../../assets/imgs/animatedHeader.svg);
     background-size: 100%;
     background-repeat: no-repeat
 }
