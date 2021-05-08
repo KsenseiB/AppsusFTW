@@ -1,5 +1,6 @@
 @import './basics/fonts.css';
 @import './basics/header.css';
+@import './media-queries.css';
 @import '/apps/Keep/assets/css/keepApp.css';
 @import '../../apps/Email/assets/emailApp.css';
 @import '../../apps/Keep/assets/css/keepApp.css';
@@ -27,12 +28,13 @@ body {
     width: 90vw;
     background-image: url(../../assets/imgs/animatedHeader.svg);
     background-size: 100%;
-    background-repeat: no-repeat
+    background-repeat: no-repeat;
 }
 
 .main {
     width: 100%;
     margin: 0 2rem;
+    margin-bottom: 2rem
 }
 
 textarea {

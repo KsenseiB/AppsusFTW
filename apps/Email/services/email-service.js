@@ -16,23 +16,23 @@ export const emailService = {
 const loadStorage = storageService.loadFromStorage(KEY);
 var gEmails = loadStorage ? loadStorage : [{
         id: '1',
-        sender: 'Roey',
-        subject: 'Wassap?',
-        body: 'Pick up!',
+        sender: 'Roey@CA.com',
+        subject: 'Project rdy??',
+        body: 'Are we good to go?',
         isRead: false,
         sentAt: new Date().toLocaleDateString()
     },
     {
         id: '2',
-        sender: 'Panda',
+        sender: 'Panda@yahoo.com',
         subject: 'yoooooooooooooooooooooooooooooooo?',
-        body: 'Pick upedsgzeeeeeeeeeee!',
+        body: 'I luv u',
         isRead: true,
         sentAt: new Date().toLocaleDateString()
     },
     {
         id: '3',
-        sender: 'Elon Musk',
+        sender: 'ElonMusk@tesla.com',
         subject: 'why you ghosting?',
         body: 'Pick up!',
         isRead: false,
@@ -50,15 +50,15 @@ var gEmails = loadStorage ? loadStorage : [{
         id: '5',
         sender: ' thor@theworthy.com',
         subject: 'Shower thoughts',
-        body: 'Pick up!',
+        body: 'I never bring my brother to parties because he\'s so low-key.',
         isRead: false,
         sentAt: new Date().toLocaleDateString()
     },
     {
         id: '6',
-        sender: 'Elon Musk',
-        subject: 'why you ghosting?',
-        body: 'Pick up!',
+        sender: 'nickfury@shield.gov',
+        subject: 'I bet the Avengers would be great with tools',
+        body: 'They are always assembling.',
         isRead: false,
         sentAt: new Date().toLocaleDateString()
     },
@@ -73,7 +73,7 @@ var gEmails = loadStorage ? loadStorage : [{
     {
         id: '8',
         sender: 'gandalf@thegrey.com',
-        subject: ' keep studying',
+        subject: 'keep studying',
         body: 'If you keep watching the Lord of the Rings movies, you shall not pass your exams.',
         isRead: false,
         sentAt: new Date().toLocaleDateString()
@@ -92,13 +92,6 @@ var gEmails = loadStorage ? loadStorage : [{
         isRead: false,
         sentAt: new Date().toLocaleDateString()
 
-    }, {
-        id: '11',
-        sender: 'nickfury@shield.gov',
-        subject: 'I bet the Avengers would be great with tools',
-        body: 'They are always assembling.',
-        isRead: false,
-        sentAt: new Date().toLocaleDateString()
     }
 ];
 

@@ -1,4 +1,4 @@
-const { Link } = ReactRouterDOM;
+const { NavLink, Link } = ReactRouterDOM;
 import { emailService } from '../services/email-service.js';
 
 export class EmailCompose extends React.Component {
@@ -13,7 +13,7 @@ export class EmailCompose extends React.Component {
     handleChange = (ev) => {
         const input = ev.target.name;
         const value = ev.target.value;
-        this.setState({ mail: { ...this.state.mail, [ input ]: value } });
+        this.setState({ mail: { ...this.state.mail, [input]: value } });
     }
     onSendEmail = () => {
         const { recipient, subject, body } = this.state.mail;
@@ -27,19 +27,20 @@ export class EmailCompose extends React.Component {
                 <h3>New Mail</h3>
                 <form className="mail-form flex-col glass">
                     <input type="email" name="recipient" id="recipient"
-                        placeholder="Recipients" onChange={ this.handleChange } required />
+                        placeholder="Recipients" onChange={this.handleChange} required />
 
                     <input type="text" name="subject" id="subject"
-                        placeholder="Subject..." onChange={ this.handleChange } required />
+                        placeholder="Subject..." onChange={this.handleChange} required />
 
-                    <joomla-ck-editor>
+                    <joomla-ck-editor className="editor">
                         <textarea name="content" id="editor" placeholder="Email content.." ></textarea>
                     </joomla-ck-editor>
 
-
-                    <Link to="/mail" onClick={ () => {
+                    <NavLink to="/mail" onClick={() => {
                         this.onSendEmail()
-                    } }><input className="btn email-compose-btn" type="submit" value="Send"></input></Link>
+                    }} className="email-compose-btn" activeClassName="activeEmail">
+                        <input className="btn email-compose-btn" type="submit" value="Send"></input>
+                    </NavLink>
                 </form>
             </div>
         )

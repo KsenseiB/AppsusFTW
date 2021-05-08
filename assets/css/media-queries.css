@@ -1,0 +1,7 @@
+@media (max-width: 760px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+}

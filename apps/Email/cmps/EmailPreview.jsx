@@ -20,7 +20,7 @@ export function EmailPreview({ email, onDeleteEmail }) {
             <NavLink to={`/mail/${email.id}`} onClick={() => onMarkIsRead()} className="email-link" activeClassName="activeEmail">
                 <li className={'flex email-list-item email-preview ' + previewClass} >
                     <div className="flex preview-txt">
-                        <p className={previewClass}>{email.sender}</p>
+                        <p className={previewClass}>{email.sender} | </p>
                         <p className={previewClass}>{longTxt()}</p>
                     </div>
                     <div className="timestamp"><span>{email.sentAt}</span>
