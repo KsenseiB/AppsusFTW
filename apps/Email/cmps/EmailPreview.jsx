@@ -19,16 +19,18 @@ export function EmailPreview({ email, onDeleteEmail }) {
     const previewClass = (!email.isRead) ? 'unread' : '';
 
     return (
-        <Link to={ `/mail/` } onClick={ () => onMarkIsRead() }>
+        <React.Fragment>
+        <Link to={ `/mail/${ email.id }` } onClick={ () => onMarkIsRead() }>
             <li className={ 'flex email-list-item email-preview ' + previewClass } >
 
                 <p className={ previewClass }>{ email.sender }</p>
                 <p className={ previewClass }>{ longTxt() }</p>
                 <div className="timestamp"><span>{ email.sentAt }</span>
-                    <button onClick={ () => onDeleteEmail(email.id) }><i className="fas fa-trash btn"></i></button>
                 </div>
             </li>
         </Link>
+                    <button onClick={ () => onDeleteEmail(email.id) }><i className="fas fa-trash btn"></i></button>
+                    </React.Fragment>
     )
 }
 
