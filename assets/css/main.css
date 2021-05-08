@@ -1,0 +1,31 @@
+@import './basics/fonts.css';
+@import './basics/header.css';
+@import './basics/footer.css';
+@import '/apps/Keep/assets/css/keepApp.css';
+@import '/apps/Email/assets/emailApp.css';
+@import './basics/loader.css';
+@import './helpers.css';
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@200;300&display=swap');
+* {
+    box-sizing: border-box;
+    --col1: #fffcf9;
+    --col2: #e7ddda;
+    --col3: #eeb5e2;
+    --col4: #9c91ae;
+    --col5: #4b3742;
+    --light-txt: #e7ddda;
+    --dark-txt: #4b3742;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: var(--col2);
+    font-family: 'Lato', sans-serif;
+    /* font-family: 'Oswald', sans-serif; */
+    font-weight: 600;
+}

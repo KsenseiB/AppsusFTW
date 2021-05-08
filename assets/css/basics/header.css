@@ -1,0 +1,68 @@
+        /* svg {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .container {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+    vertical-align: middle;
+    overflow: hidden;
+  }
+ */
+        
+        .app-header {
+            /* position: absolute; */
+            top: 0;
+            width: 100vw;
+            padding: 1rem;
+            /* margin-bottom: 1rem; */
+            background-color: var(--col5);
+            color: var(--light-txt);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .app-header a {
+            color: var(--col3);
+            text-decoration: none;
+            background-color: #fff;
+            padding: 1rem;
+        }
+        
+        .app-header h1 {
+            color: var(--light-txt);
+        }
+        /*  WAVE       
+        .app-header {
+            position: absolute;
+            z-index: 3;
+        }
+        
+        .app-header:after {
+            display: block;
+        }
+        
+        .custom-shape-divider-top-1620293757 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+        }
+        
+        .custom-shape-divider-top-1620293757 svg {
+            position: relative;
+            display: block;
+            width: calc(110% + 1.3px);
+            height: 181px;
+        }
+        
+        .custom-shape-divider-top-1620293757 .shape-fill {
+            fill: #FFFFFF;
+        } */
