@@ -1,5 +1,3 @@
-/* why do I need to change input and text area text properties for each invdevidually?*/
-
 * {
     --col1: rgb(38, 196, 135);
     --col2: rgb(133, 255, 51);
@@ -8,6 +6,7 @@
 }
 
 .mailbox-container {
+    width: 100%;
     justify-content: space-between;
 }
 
@@ -17,9 +16,32 @@
 }
 
 .email-list ul {
-    width: 100%;
-    height: 100%;
+    margin: 1rem;
 }
+
+.email-link:link {
+    color: var(--dark-txt);
+    text-decoration: none;
+}
+
+.email-link:visited {
+    color: var(--dark-txt);
+}
+
+.email-link:hover {
+    transform: scale(1.1);
+}
+
+.email-link:active {
+    color: var(--col1);
+}
+
+
+/* .activeEmail {
+    color: var(--light-txt);
+    text-decoration: none;
+    font-weight: 700;
+} */
 
 .compose-email {
     margin: 0 3rem;
@@ -42,14 +64,6 @@
 .email-nav ul {
     padding: 5px;
 }
-
-
-/* li {
-    border-bottom: 1px solid var(--col1);
-    justify-content: space-between;
-    cursor: pointer;
-    list-style-type: none;
-} */
 
 li.unread {
     font-weight: 700;
@@ -83,8 +97,9 @@ li.unread {
 }
 
 .mail-actions {
-    background-color: rgba(255, 255, 255, 0.781);
+    background-color: rgba(255, 255, 255, 0.6);
     padding: 0.5rem;
+    border-radius: 10px;
 }
 
 .mail-info {
@@ -160,21 +175,10 @@ li.unread {
     border-radius: 3px;
 }
 
-.email-list-item button {
-    font-size: 1rem;
-    border: none;
-    padding: 3px;
-    margin: 5px;
-    background-color: transparent;
-    cursor: pointer;
+.email-list-item p {
+    margin-right: 1.5rem;
 }
 
-.email-list-item button:hover {
-    color: var(--col1);
-    font-size: 1rem;
-    border: none;
-    padding: 3px;
-    margin: 5px;
-    background-color: transparent;
-    cursor: pointer;
+.timestamp {
+    margin: auto 1rem
 }

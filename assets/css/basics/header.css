@@ -1,49 +1,46 @@
 /* https://www.finisher.co/lab/header/ */
-.app-header {
-  font-family: 'Oswald', sans-serif;
 
-  /* position: absolute; */
-  /* top: 0; */
-  width: 100vw;
-  /* background-color: #000; */
-  padding: 2rem;
-  /* margin-bottom: 1rem; */
-  /* background-color: var(--col5);
-  color: var(--light-txt); */
-  display: flex;
-  justify-content: space-between;
-  justify-items: center;
-  /* align-items: center; */
-  /* background-image: url(/assets/imgs/svgsmthin.svg);
-  background-size: cover; */
+.app-header {
+    font-family: 'Oswald', sans-serif;
+    width: 100vw;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
 }
 
 .activeNav {
-  border-bottom: 0.4rem solid rgba(255, 255, 255, 0.527);
-  cursor: pointer;
-  /* transition: transform 0.1s; */
+    border-bottom: 0.4rem solid rgba(255, 255, 255, 0.527);
+    cursor: pointer;
 }
+
 .nav-link:link {
-  color: #fff;
-  font-size: 1.3rem;
-  line-height: 1.6rem;
-  text-decoration: none;
-  margin: 1.5rem;
+    color: #fff;
+    font-size: 1.3rem;
+    line-height: 1.6rem;
+    text-decoration: none;
+    margin: 1.5rem;
 }
+
 .nav-link:visited {
-  color: #fff;
+    color: #fff;
 }
+
 .nav-link:hover {
-  transform: scale(1.2);
+    transform: scale(1.2);
 }
+
 .nav-link:active {
-  color: #000;
+    color: #000;
 }
+
 .logo {
-  letter-spacing: 0;
-  margin: 0;
-  padding: 0;
+    letter-spacing: 0;
+    margin: 0;
+    padding: 0;
 }
+
+
 /* .header-bg {
   background-image: url(/assets/imgs/svgsmthin.svg);
   background-size: cover;

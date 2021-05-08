@@ -25,15 +25,15 @@ body {
     letter-spacing: 0.05em;
     height: 100vh;
     width: 90vw;
-    /* padding: 2rem; */
-    /* font-family: 'Oswald', sans-serif; */
+    /* margin: 0 auto; */
     background-image: url(/assets/imgs/animatedHeader.svg);
     background-size: 100%;
     background-repeat: no-repeat
 }
 
-main {
-    margin: 0 3rem;
+.main {
+    width: 100%;
+    margin: 0 2rem;
 }
 
 textarea {
@@ -67,7 +67,7 @@ li {
 .txt-input,
 input {
     color: var(--col1);
-    margin-top: 7px;
+    margin: 7px;
     padding: 5px;
     border-radius: 7px;
     border: 1px solid;
@@ -78,31 +78,6 @@ input:focus,
 .txt-input:focus {
     background-color: #fff;
     border: 2px solid;
-}
-
-
-/* Buttons */
-
-button {
-    align-self: center;
-    padding: 7px;
-    margin: 5px;
-    font-size: 1rem;
-    border-radius: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    cursor: pointer;
-    cursor: pointer;
-}
-
-button:hover {
-    font-weight: 700;
-    color: var(--col1);
-    font-size: 1rem;
-    cursor: pointer;
-}
-
-button:active {
-    color: #000;
 }
 
 .mail-form input {
@@ -124,6 +99,30 @@ button:active {
     margin: 5px;
     border: 1px solid var(--col1);
     border-radius: 3px;
+}
+
+
+/* Buttons */
+
+button {
+    align-self: center;
+    padding: 7px;
+    margin: 5px;
+    font-size: 1rem;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    cursor: pointer;
+}
+
+button:hover {
+    font-weight: 700;
+    color: var(--col1);
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button:active {
+    color: #000;
 }
 
 

@@ -38,10 +38,6 @@
     text-decoration-line: line-through;
 }
 
-.note-vid {
-    width: 35rem;
-}
-
 .create-note {
     display: flex;
     justify-content: center;
@@ -77,33 +73,7 @@
     justify-self: space-around;
 }
 
-
-/* .btn-opt {
-    border: 0px;
-    font-size: 1rem;
-    color: grey;
-    background-color: #000;
-}
-
-.btn-type {
-    border: 0px;
-    font-size: 1.5rem;
-    color: grey;
-    background-color: #e6ddda00;
-}
-
-.btn:hover {
-    transform: scale(1.5);
-    transition: transform 0.2s;
-    color: black;
-} */
-
 .input-color:hover {
     transform: scale(1.2);
     transition: transform 0.2s;
-}
-
-.revert,
-.revert:hover {
-    color: ;
 }

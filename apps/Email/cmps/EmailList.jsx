@@ -5,7 +5,7 @@ export function EmailList({ emails, onDeleteEmail }) {
 
     return (
         <section className="email-list flex-col">
-            <ul className="glass">
+            <ul className="glass clean-list">
 
                 { emails.length === 0 && <h3>Inbox is empty, find some friends</h3> }
 

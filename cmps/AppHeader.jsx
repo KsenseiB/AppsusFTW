@@ -9,7 +9,7 @@ export class AppHeader extends React.Component {
         return (
             <header className="app-header">
                 {/* <div className="header-bg"> </div> */ }
-                <h1 className="logo">One app to rule them all.</h1>
+                <h1 className="logo">One App To Rule Them All.</h1>
                 <div className="nav">
                     <NavLink exact to="/" className="nav-link" activeClassName="activeNav" >Home</NavLink>
                     <NavLink to="/book" className="nav-link" activeClassName="activeNav">Books</NavLink>

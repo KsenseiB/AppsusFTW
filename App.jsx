@@ -14,8 +14,8 @@ export function App() {
     return (
         <Router>
             <AppHeader />
-            <main>
-                <Switch>
+            <main className="main">
+                <Switch >
                 <Route component={ EmailCompose } path="/mail/compose" />
                     <Route component={ EmailDetails } path="/mail/:mailId" />
                     <Route component={ EmailApp } path="/mail" />

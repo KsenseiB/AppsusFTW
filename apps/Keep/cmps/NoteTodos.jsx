@@ -12,13 +12,13 @@ export class NoteTodos extends React.Component {
     }
 
     setPinned = () => {
-        if (!this.props.note.isPinned) this.setState({className: 'note note-todo'})
-        else (this.setState({className: 'note note-todo pinned'}))
+        if (!this.props.note.isPinned) this.setState({ className: 'note note-todo' })
+        else (this.setState({ className: 'note note-todo pinned' }))
     }
 
-    markCheck = (ev) =>{
-        if (ev.target.className==="unchecked") ev.target.className="checked"
-        else (ev.target.className="unchecked")
+    markCheck = (ev) => {
+        if (ev.target.className === "unchecked") ev.target.className = "checked"
+        else (ev.target.className = "unchecked")
     }
 
     onAddTask = (ev) => {
@@ -26,7 +26,7 @@ export class NoteTodos extends React.Component {
         if (!this.state.taskTxt) return
         keepService.addTask(this.props.note.id, this.state.taskTxt)
         this.props.loadNotes()
-        this.setState({taskTxt: ''})
+        this.setState({ taskTxt: '' })
     }
 
     handleChange = (ev) => {
@@ -40,25 +40,25 @@ export class NoteTodos extends React.Component {
     }
 
     render() {
-        const divStyle = {backgroundColor: this.props.note.style.backgroundColor}
-        const {todos, title} = this.props.note.info
-        const {taskPlaceholder, taskTxt, className} = this.state
+        const divStyle = { backgroundColor: this.props.note.style.backgroundColor }
+        const { todos, title } = this.props.note.info
+        const { taskPlaceholder, taskTxt, className } = this.state
         return (<div className={className} style={divStyle}>
             <h2>{title}</h2>
             <ul>
                 {todos.map((todo) => (
                     <li className="unchecked" onClick={this.markCheck} key={todo.id}>
                         {todo.txt}
-                        <button onClick={()=>this.onRemoveTask(todo.id)}>X</button>
-                        </li>
-    
+                        <button onClick={() => this.onRemoveTask(todo.id)}><i className="todo-trash fas fa-trash-alt"></i></button>
+                    </li>
+
                 ))}
                 <form className="add-task" onSubmit={this.onAddTask}>
-                <input type="text" value={taskTxt} onChange={this.handleChange} placeholder={taskPlaceholder} />
-                <button>Add new task</button>
+                    <input type="text" value={taskTxt} onChange={this.handleChange} placeholder={taskPlaceholder} />
+                    <button>Add new task</button>
                 </form>
             </ul>
-            <NoteOptions noteId={this.props.note.id} loadNotes={this.props.loadNotes} setPinned={this.setPinned}/>
+            <NoteOptions noteId={this.props.note.id} loadNotes={this.props.loadNotes} setPinned={this.setPinned} />
         </div>)
     }
 }

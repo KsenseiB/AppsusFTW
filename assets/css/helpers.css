@@ -1,16 +1,18 @@
 .clean-list {
-  list-style-type: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
 .flex {
-  display: flex;
+    display: flex;
 }
 
 .flex-col {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
