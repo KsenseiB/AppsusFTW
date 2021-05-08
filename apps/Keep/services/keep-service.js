@@ -19,8 +19,8 @@ var gNotes = [{
         type: "NoteText",
         isPinned: false,
         info: {
-            txt: "Fullstack Me Baby!",
-            title: ''
+            txt: "Don't forget to be a fullstack developer!",
+            title: 'Fullstack Me Baby!'
         },
         style: {
             backgroundColor: "#var(--col1)"
@@ -32,7 +32,7 @@ var gNotes = [{
         isPinned: false,
         info: {
             txt: "Don't forget to have your code reviewed",
-            title: ''
+            title: 'Code Review!'
         },
         style: {
             backgroundColor: "#var(--col1)"
@@ -48,6 +48,18 @@ var gNotes = [{
         },
         style: {
             backgroundColor: "#var(--col1)"
+        }
+    },
+    {
+        id: utilService.makeId(),
+        type: "NoteImg",
+        isPinned: false,
+        info: {
+            url: "https://static2.srcdn.com/wordpress/wp-content/uploads/2018/09/Avengers-Infinity-War-Thor-Stabs-Thanos.jpg",
+            title: 'Remeber to go for the head'
+        },
+        style: {
+            backgroundColor: "#var(--col3)"
         }
     },
     {
@@ -107,6 +119,18 @@ var gNotes = [{
         },
         style: {
             backgroundColor: "#var(--col1)"
+        }
+    },
+    {
+        id: utilService.makeId(),
+        type: "NoteVid",
+        isPinned: false,
+        info: {
+            title: "Shahar Hason every Thursday",
+            url: "https://www.youtube.com/watch?v=NTN5e1JtOAw"
+        },
+        style: {
+            backgroundColor: "#var(--col3)"
         }
     }
 ];
