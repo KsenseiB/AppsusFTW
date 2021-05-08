@@ -1,5 +1,5 @@
-const { Link } = ReactRouterDOM
-import { emailService } from './email/emailService.jsx'
+const { Link } = ReactRouterDOM;
+import { emailService } from './email/emailService.jsx';
 
 export class EmailCompose extends React.Component {
     state = {
@@ -13,7 +13,7 @@ export class EmailCompose extends React.Component {
     handleChange = (ev) => {
         const input = ev.target.name;
         const value = ev.target.value;
-        this.setState({ mail: { ...this.state.mail, [input]: value } });
+        this.setState({ mail: { ...this.state.mail, [ input ]: value } });
     }
     onSendEmail = () => {
         const { recipient, subject, body } = this.state.mail;
@@ -25,19 +25,21 @@ export class EmailCompose extends React.Component {
         return (
             <div className="compose-email">
                 <h3>New Mail</h3>
-                <form className="mail-form flex-col">
+                <form className="mail-form flex-col glass">
                     <input type="email" name="recipient" id="recipient"
-                        placeholder="Recipients" onChange={this.handleChange} />
+                        placeholder="Recipients" onChange={ this.handleChange } required />
 
                     <input type="text" name="subject" id="subject"
-                        placeholder="Subject..." onChange={this.handleChange} />
+                        placeholder="Subject..." onChange={ this.handleChange } required />
 
-                    <textarea name="content" id="content" cols="20" rows="10"
-                        placeholder="Email content.." onChange={this.handleChange}></textarea>
-                        
-                    <Link to="/mail" onClick={() => {
+                    <joomla-ck-editor>
+                        <textarea name="content" id="editor" placeholder="Email content.." ></textarea>
+                    </joomla-ck-editor>
+
+
+                    <Link to="/mail" onClick={ () => {
                         this.onSendEmail()
-                    }}>Send</Link>
+                    } }><input className="btn email-compose-btn" type="submit" value="Send"></input></Link>
                 </form>
             </div>
         )

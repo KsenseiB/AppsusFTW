@@ -1,15 +1,42 @@
-// import {EmailDetails} from './EmailDetails.jsx'
+import { emailService } from "../services/email-service";
 
-export function EmailPreview({ email, onDeleteEmail, onOpenEmail }) {
-    const previewClass = (email.isRead) ? 'unread' : '';
+const { Link } = ReactRouterDOM
+// import { showUserMsg } from '../../../services/event-bus-service.js'
+
+export function EmailPreview({ email, onDeleteEmail }) {
+
+    function longTxt() {
+        if (email.subject.length > 10) return email.subject.substring(0, 10) + '...';
+        else return email.subject;
+    }
+    //should this be on main emailApp class component?
+    function onMarkIsRead() {
+        emailService.readEmail(email);
+    }
+
+    //onClick={ () => toggleIsRead(email.id)
+
+    const previewClass = (!email.isRead) ? 'unread' : '';
+
     return (
-        <li className={'flex list-item email-preview ' + previewClass} >
-            <p>sender - {email.sender}</p>
-            <p>subject - {email.subject}</p>
-            <div className="timestamp"><p>sentAt {email.sentAt}</p>
-            </div>
-            <button onClick={() => onDeleteEmail(email.id)}>X</button>
-            {/* <Link to={`/email/${email.id}/${email.sender}`}>Details</Link> */}
-        </li>
+        <Link to={ `/mail/${ email.id }` } onClick={ () => onMarkIsRead() }>
+            <li className={ 'flex email-list-item email-preview ' + previewClass } >
+
+                <p className={ previewClass }>{ email.sender }</p>
+                <p className={ previewClass }>{ longTxt() }</p>
+                <div className="timestamp"><span>{ email.sentAt }</span>
+                    <button onClick={ () => onDeleteEmail(email.id) }><i className="fas fa-trash btn"></i></button>
+                </div>
+            </li>
+        </Link>
     )
 }
+
+
+
+{/* <tr className={'flex list-item email-preview ' + previewClass} >
+        <td>{email.sender}</td>
+        <td>{email.subject}</td>
+        <td>{email.sentAt}</td>
+        <td><button onClick={() => onDeleteEmail(email.id)}>X</button></td>
+    </tr> */}

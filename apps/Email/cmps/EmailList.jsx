@@ -1,15 +1,19 @@
 import { EmailPreview } from './EmailPreview.jsx'
 
-export function EmailList({ emails, onDeleteEmail, EmailDetails }) {
+export function EmailList({ emails, onDeleteEmail }) {
+
 
     return (
-        <section className="email-list mailbox-main flex-col">
-            {emails.length === 0 && <h3>Inbox is empty, find some friends</h3>}
+        <section className="email-list flex-col">
+            <ul className="glass">
 
-            {emails.map((email) => (
-                <EmailPreview email={email} key={email.id} onDeleteEmail={onDeleteEmail} />
-            ))}
+                { emails.length === 0 && <h3>Inbox is empty, find some friends</h3> }
 
+                { emails.map((email) => (
+                    <EmailPreview email={ email } key={ email.id } onDeleteEmail={ onDeleteEmail } />
+                )) }
+
+            </ul>
         </section>
     )
 }

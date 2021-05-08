@@ -1,68 +1,52 @@
-        /* svg {
-    display: inline-block;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  .container {
-    display: inline-block;
-    position: relative;
-    width: 100%;
-    padding-bottom: 100%;
-    vertical-align: middle;
-    overflow: hidden;
-  }
- */
-        
-        .app-header {
-            /* position: absolute; */
-            top: 0;
-            width: 100vw;
-            padding: 1rem;
-            /* margin-bottom: 1rem; */
-            background-color: var(--col5);
-            color: var(--light-txt);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .app-header a {
-            color: var(--col3);
-            text-decoration: none;
-            background-color: #fff;
-            padding: 1rem;
-        }
-        
-        .app-header h1 {
-            color: var(--light-txt);
-        }
-        /*  WAVE       
-        .app-header {
-            position: absolute;
-            z-index: 3;
-        }
-        
-        .app-header:after {
-            display: block;
-        }
-        
-        .custom-shape-divider-top-1620293757 {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            overflow: hidden;
-            line-height: 0;
-        }
-        
-        .custom-shape-divider-top-1620293757 svg {
-            position: relative;
-            display: block;
-            width: calc(110% + 1.3px);
-            height: 181px;
-        }
-        
-        .custom-shape-divider-top-1620293757 .shape-fill {
-            fill: #FFFFFF;
-        } */
+/* https://www.finisher.co/lab/header/ */
+.app-header {
+  font-family: 'Oswald', sans-serif;
+
+  /* position: absolute; */
+  /* top: 0; */
+  width: 100vw;
+  /* background-color: #000; */
+  padding: 2rem;
+  /* margin-bottom: 1rem; */
+  /* background-color: var(--col5);
+  color: var(--light-txt); */
+  display: flex;
+  justify-content: space-between;
+  justify-items: center;
+  /* align-items: center; */
+  /* background-image: url(/assets/imgs/svgsmthin.svg);
+  background-size: cover; */
+}
+
+.activeNav {
+  border-bottom: 0.4rem solid rgba(255, 255, 255, 0.527);
+  cursor: pointer;
+  /* transition: transform 0.1s; */
+}
+.nav-link:link {
+  color: #fff;
+  font-size: 1.3rem;
+  line-height: 1.6rem;
+  text-decoration: none;
+  margin: 1.5rem;
+}
+.nav-link:visited {
+  color: #fff;
+}
+.nav-link:hover {
+  transform: scale(1.2);
+}
+.nav-link:active {
+  color: #000;
+}
+.logo {
+  letter-spacing: 0;
+  margin: 0;
+  padding: 0;
+}
+/* .header-bg {
+  background-image: url(/assets/imgs/svgsmthin.svg);
+  background-size: cover;
+  width: 100vw;
+  height: 100%;
+} */

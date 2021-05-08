@@ -1,16 +1,16 @@
 .clean-list {
-    list-style: none;
+  list-style-type: none;
 }
 
 .flex {
-    display: flex;
+  display: flex;
 }
 
 .flex-col {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }

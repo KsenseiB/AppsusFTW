@@ -1,0 +1,2 @@
+EmailDetails component - function "onMarkUnread" doesnt work,
+supposed to chane emails.isRead to false and navigate back to email page.

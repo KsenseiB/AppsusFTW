@@ -1,13 +1,14 @@
-const Router = ReactRouterDOM.HashRouter
+const Router = ReactRouterDOM.HashRouter;
 const { Route, Switch } = ReactRouterDOM;
+
 import { emailService } from './services/email-service.js'
-import { EmailList } from './cmps/EmailList.jsx'
-import { EmailCompose } from './cmps/EmailCompose.jsx'
 import { EmailSideNav } from './cmps/EmailSideNav.jsx'
+import { EmailList } from './cmps/EmailList.jsx'
 
 export class EmailApp extends React.Component {
     state = {
-        emails: null
+        emails: null,
+        filterBy: null
     }
 
     componentDidMount() {
@@ -24,25 +25,21 @@ export class EmailApp extends React.Component {
         emailService.deleteEmail(emailId)
             .then(() => this.loadEmails())
     }
-    // onOpenEmail={this.openEmail}
-    // openEmail =(emailId) =>{
-    //     //link to open email
-    //     console.log('need Link to new page')
-    // }
+
+    setFilter = (filterBy) => {
+        this.setState({ filterBy }, this.loadEmails)
+    }
+
     render() {
-        const { emails } = this.state
+        const { emails } = this.state;
         if (!emails) return (<div className="loading">
             <span>Loading</span>
         </div>)
         console.log('emails', emails);
         return (
             <section className="mailbox-container flex">
-                <div className="loading">
-                    <span>Loading</span>
-                </div>
-                <EmailSideNav />
-                <EmailList emails={emails} onDeleteEmail={this.deleteEmail} />
-                <EmailCompose />
+                <EmailSideNav onSetFilter={ this.setFilter } />
+                <EmailList loadEmail={ this.loadEmails } emails={ emails } onDeleteEmail={ this.deleteEmail } />
             </section >
         )
     }
