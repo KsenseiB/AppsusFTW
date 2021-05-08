@@ -1,7 +1,6 @@
 import { bookService } from '../services/book-service.js'
 import { BookList } from '../cmps/BookList.jsx'
 import { BookFilter } from '../cmps/BookFilter.jsx'
-const { Link } = ReactRouterDOM
 
 export class BooksHome extends React.Component {
     state = {
@@ -33,9 +32,6 @@ export class BooksHome extends React.Component {
         if (!books) return <div>Loading...</div>
         return (
             <section>
-                <h2>BookApp</h2>
-                <p>Go back to <Link to="/">HomePage</Link> </p>
-                <p>Know More <Link to="/about"> about us</Link> </p>
                 {!selectedBook && <React.Fragment>
                     <BookFilter onSetFilter={this.onSetFilter} />
                     <BookList books={books} setSelectedBook={this.setSelectedBook} />
