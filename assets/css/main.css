@@ -85,26 +85,19 @@ input:focus,
 
 button {
     align-self: center;
-    padding: 3px;
+    padding: 7px;
     margin: 5px;
     font-size: 1rem;
-    padding: 7px;
     border-radius: 15px;
     border: 1px solid rgba(255, 255, 255, 0.05);
     cursor: pointer;
-    /* background-color: transparent; */
     cursor: pointer;
 }
 
 button:hover {
     font-weight: 700;
     color: var(--col1);
-    /* color: var(--col2); */
     font-size: 1rem;
-    border: none;
-    padding: 3px;
-    margin: 5px;
-    background-color: transparent;
     cursor: pointer;
 }
 

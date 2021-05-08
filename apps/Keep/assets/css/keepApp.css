@@ -12,6 +12,7 @@
 .note {
     border: solid 1px #000;
     text-align: center;
+    padding: 5px;
     margin: 1rem;
     border-radius: 10px;
     box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.40);
@@ -20,12 +21,6 @@
 .note:hover {
     transform: scale(1.02);
     transition: transform 0.2s;
-}
-
-.btn:hover {
-    transform: scale(1.5);
-    transition: transform 0.2s;
-    color: black;
 }
 
 .note-list:not(.pinned) {
@@ -50,13 +45,6 @@
 .create-note {
     display: flex;
     justify-content: center;
-}
-
-.btn-type {
-    border: 0px;
-    font-size: 1.5rem;
-    color: grey;
-    background-color: #e6ddda00;
 }
 
 .unclicked {
@@ -89,12 +77,26 @@
     justify-self: space-around;
 }
 
-.btn-opt {
+
+/* .btn-opt {
     border: 0px;
     font-size: 1rem;
     color: grey;
     background-color: #000;
 }
+
+.btn-type {
+    border: 0px;
+    font-size: 1.5rem;
+    color: grey;
+    background-color: #e6ddda00;
+}
+
+.btn:hover {
+    transform: scale(1.5);
+    transition: transform 0.2s;
+    color: black;
+} */
 
 .input-color:hover {
     transform: scale(1.2);
