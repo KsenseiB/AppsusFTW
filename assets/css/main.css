@@ -1,7 +1,7 @@
 @import './basics/fonts.css';
 @import './basics/header.css';
 @import '/apps/Keep/assets/css/keepApp.css';
-@import '/apps/Email/assets/emailApp.css';
+@import '/apps/Email/assets/css/emailApp.css';
 @import '/apps/Books/assets/booksApp.css';
 @import './basics/loader.css';
 @import './helpers.css';
