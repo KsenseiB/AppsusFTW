@@ -30,10 +30,10 @@ export class NoteFilter extends React.Component {
                 <h4>Filter Notes By</h4>
                 <label htmlFor="search">Note Title</label>
                 <input type="text" value={text} onChange={this.handleChange} />
-                <button name="NoteText" onClick={this.handleChange}><i className="fas fa-font"></i></button>
-                <button name="NoteImg" onClick={this.handleChange}><i className="fas fa-image"></i></button>
-                <button name="NoteTodos" onClick={this.handleChange}><i className="fas fa-list-ul"></i></button>
-                <button name="NoteVid" onClick={this.handleChange}><i className="fab fa-youtube"></i></button>
+                <button name="NoteText" onClick={this.handleChange}>Text</button>
+                <button name="NoteImg" onClick={this.handleChange}>Image</button>
+                <button name="NoteTodos" onClick={this.handleChange}>To-Do</button>
+                <button name="NoteVid" onClick={this.handleChange}>Video</button>
                 <button name="all" onClick={this.handleChange}>Reset Filter</button>
             </div>
         )

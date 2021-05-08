@@ -39,7 +39,6 @@ export class KeepApp extends React.Component {
             )
         return (
             <div className="keep-container">
-                <header className="keep-header"><h1>Miss Keep</h1></header>
                 <main className="keep-main flex-col">
                     <NoteFilter notes={notes} loadNotes={this.loadNotes} onSetFilter={this.onSetFilter}/>
                     <CreateNote loadNotes={this.loadNotes} />
