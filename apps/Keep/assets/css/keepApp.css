@@ -1,36 +1,10 @@
-* {
-    box-sizing: border-box;
-    --col1: #fffcf9;
-    --col2: #e7ddda;
-    --col3: #eeb5e2;
-    --col4: #9c91ae;
-    --col5: #4b3742;
-    --light-txt: #e7ddda;
-    --dark-txt: #4b3742;
-}
-
-.keep-container {
-    background-color: var(--col2);
-    /* margin-top: 1rem; */
-    /* height: 100%; */
-}
-
 .keep-header {
-    /* color: black; */
-    /* background-color: rgba(249, 253, 0, 0.753); */
     text-align: center;
-}
-
-.keep-header h1 {
-    /* color: black; */
-    /* background-color: rgba(249, 253, 0, 0.753); */
-    color: var(--dark-txt);
 }
 
 .note {
     /* width: 100%; */
-    background-color: var(--col3);
-    border: solid 1px var(--col5);
+    border: solid 1px #000;
     font-size: 1.2rem;
     padding: 1rem;
     text-align: center;
@@ -39,12 +13,12 @@
     box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.40);
 }
 
-.note:hover{
+.note:hover {
     transform: scale(1.02);
     transition: transform 0.2s;
 }
 
-.btn:hover{
+.btn:hover {
     transform: scale(1.5);
     transition: transform 0.2s;
     color: black;
@@ -61,7 +35,7 @@
     width: 30%;
 }
 
-.cheked {
+.checked {
     text-decoration-line: line-through;
 }
 
@@ -69,33 +43,33 @@
     width: 35rem;
 }
 
-.create-note{
+.create-note {
     display: flex;
     justify-content: center;
 }
 
-.btn-type{
+.btn-type {
     border: 0px;
     font-size: 1.5rem;
     color: grey;
     background-color: #e6ddda00;
 }
 
-.unclicked{
+.unclicked {
     background-color: #fff;
 }
 
-.clicked{
+.clicked {
     background-color: lightblue;
 }
 
-.input-modal{
-    background-color: #743365;
-    border: solid 0.3rem var(--col5);
+.input-modal {
+    background-color: #000;
+    border: solid 0.3rem #000;
     display: flex;
     flex-direction: column;
     justify-content: center;
-	align-items: center;
+    align-items: center;
     position: fixed;
     padding: 1rem;
     z-index: 1;
@@ -104,25 +78,26 @@
     border-radius: 2rem;
 }
 
-.pinned{
+.pinned {
     order: -1;
     flex: 0 0 100%;
     align-self: space-around;
     justify-self: space-around;
 }
 
-.btn-opt{
+.btn-opt {
     border: 0px;
     font-size: 1rem;
     color: grey;
-    background-color: #e6ddda00;
+    background-color: #000;
 }
 
-.input-color:hover{
+.input-color:hover {
     transform: scale(1.2);
-    transition: transform 0.2s;    
+    transition: transform 0.2s;
 }
 
-.revert, .revert:hover{
+.revert,
+.revert:hover {
     color: #fd00c6;
 }

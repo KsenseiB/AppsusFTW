@@ -17,7 +17,7 @@ export class NoteTodos extends React.Component {
     }
 
     markCheck = (ev) =>{
-        if (ev.target.className==="unchecked") ev.target.className="cheked"
+        if (ev.target.className==="unchecked") ev.target.className="checked"
         else (ev.target.className="unchecked")
     }
 
