@@ -3,7 +3,7 @@ import { NoteOptions } from './NoteOptions.jsx'
 export class NoteTxt extends React.Component {
 
     state = {
-        className: 'note note-txt',
+        className: 'note note-txt glass',
     }
 
     componentDidMount() {
@@ -11,7 +11,7 @@ export class NoteTxt extends React.Component {
     }
 
     setPinned = () => {
-        if (!this.props.note.isPinned) this.setState({ className: 'note note-txt' })
+        if (!this.props.note.isPinned) this.setState({ className: 'note note-txt glass' })
         else (this.setState({ className: 'note note-txt pinned' }))
     }
 

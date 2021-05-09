@@ -3,7 +3,7 @@ import { NoteOptions } from './NoteOptions.jsx'
 export class NoteVid extends React.Component {
 
     state = {
-        className: 'note note-vid',
+        className: 'note note-vid glass',
         src: ''
     }
 

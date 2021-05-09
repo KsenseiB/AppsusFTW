@@ -23,7 +23,7 @@ var gNotes = [{
             title: 'Fullstack Me Baby!'
         },
         style: {
-            backgroundColor: "#var(--col1)"
+            backgroundColor: "rgba(255, 255, 255, 0.25)"
         }
     },
     {
@@ -35,7 +35,7 @@ var gNotes = [{
             title: 'Code Review!'
         },
         style: {
-            backgroundColor: "#var(--col1)"
+            backgroundColor: "rgba(255, 255, 255, 0.25)"
         }
     },
     {
@@ -47,7 +47,7 @@ var gNotes = [{
             title: 'Sexiest Man Alive'
         },
         style: {
-            backgroundColor: "#var(--col1)"
+            backgroundColor: "rgba(255, 255, 255, 0.25)"
         }
     },
     {
@@ -59,7 +59,7 @@ var gNotes = [{
             title: 'Remeber to go for the head'
         },
         style: {
-            backgroundColor: "#var(--col3)"
+            backgroundColor: "rgba(255, 255, 255, 0.25)"
         }
     },
     {
@@ -106,7 +106,7 @@ var gNotes = [{
             ]
         },
         style: {
-            backgroundColor: "#var(--col1)"
+            backgroundColor: "rgba(255, 255, 255, 0.25)"
         }
     },
     {
@@ -118,7 +118,7 @@ var gNotes = [{
             url: "https://youtu.be/h6fcK_fRYaI"
         },
         style: {
-            backgroundColor: "#var(--col1)"
+            backgroundColor: "rgba(255, 255, 255, 0.25)"
         }
     },
     {
@@ -130,7 +130,7 @@ var gNotes = [{
             url: "https://www.youtube.com/watch?v=NTN5e1JtOAw"
         },
         style: {
-            backgroundColor: "#var(--col3)"
+            backgroundColor: "rgba(255, 255, 255, 0.25)"
         }
     }
 ];
@@ -161,7 +161,7 @@ function saveNote(content, title, type) {
                 txt: content
             },
             style: {
-                backgroundColor: "#ebb2e2"
+                backgroundColor: "rgba(255, 255, 255, 0.25)"
             }
         }
     }
@@ -176,7 +176,7 @@ function saveNote(content, title, type) {
                 url: content,
             },
             style: {
-                backgroundColor: "#ebb2e2"
+                backgroundColor: "rgba(255, 255, 255, 0.25)"
             }
         }
     }
@@ -210,7 +210,7 @@ function saveNote(content, title, type) {
                 }, ]
             },
             style: {
-                backgroundColor: "#var(--col1)"
+                backgroundColor: "rgba(255, 255, 255, 0.25)"
             }
         }
     }
