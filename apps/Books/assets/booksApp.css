@@ -1,0 +1,14 @@
+.book-preview img {
+    padding: 10px;
+    margin: 5px;
+    width: 20%;
+}
+
+.book-preview {
+    margin: 5px;
+    flex-wrap: wrap;
+}
+
+.book-list {
+    flex-wrap: wrap;
+}
