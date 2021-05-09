@@ -4,7 +4,7 @@ export class NoteTodos extends React.Component {
 
     state = {
         taskTxt: '',
-        className: 'note note-todo'
+        className: 'note note-todo glass'
     }
 
     componentDidMount() {
@@ -12,7 +12,7 @@ export class NoteTodos extends React.Component {
     }
 
     setPinned = () => {
-        if (!this.props.note.isPinned) this.setState({ className: 'note note-todo' })
+        if (!this.props.note.isPinned) this.setState({ className: 'note note-todo glass' })
         else (this.setState({ className: 'note note-todo pinned' }))
     }
 

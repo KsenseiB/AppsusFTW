@@ -3,7 +3,7 @@ import {NoteOptions} from './NoteOptions.jsx'
 export class NoteImg extends React.Component {
 
     state = {
-        className: 'note note-img',
+        className: 'note note-img glass',
     }
 
     componentDidMount() {
